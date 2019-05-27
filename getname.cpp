@@ -1,9 +1,6 @@
 #include "getname.h"
 #include "ui_getname.h"
 #include "app/functions.h"
-#include "result.h"
-#include "ui_widget.h"
-#include "QProcess"
 #include <QFile>
 #include <QString>
 #include <QCoreApplication>
@@ -14,8 +11,6 @@ Form::Form(QWidget *parent) :
     ui(new Ui::Form)
 {
     ui->setupUi(this);
-
-    restart = new resultat();
 }
 
 Form::~Form()
@@ -31,7 +26,19 @@ void Form::on_backButton_clicked()
 
 void Form::on_playButton_clicked()
 {
-   tetris();
-   restart->show;
-   this->close();
+    QString string;
+    ui->playerName->text();
+    this->close();
+    tetris();
+    this->show();
+    QFile file("../muneoftetris/leaderlist");
+    if(file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        QTextStream writeStream(&file);
+        writeStream << string;
+        file.close();
+    }
+
+    // Здесь нужна функция сортировки файла на наличие повторов имен и лучшие результаты,
+    // т.к. появился новый игрок и новый результат
 }

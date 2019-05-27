@@ -4,7 +4,6 @@
 #include <QWidget>
 #include <getname.h>
 #include <leaderboard.h>
-#include <result.h>
 
 namespace Ui {
 class Widget;
@@ -27,7 +26,6 @@ private:
     Ui::Widget *ui;
     Form *getName;
     leaderboard *leaders;
-    resultat *restart;
 
 };
 

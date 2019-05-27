@@ -97,5 +97,70 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>playButton</sender>
+   <signal>clicked()</signal>
+   <receiver>playerName</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>181</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>183</x>
+     <y>83</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>playButton</sender>
+   <signal>clicked()</signal>
+   <receiver>label</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>213</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>83</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>backButton</sender>
+   <signal>clicked()</signal>
+   <receiver>playerName</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>147</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>154</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>backButton</sender>
+   <signal>clicked()</signal>
+   <receiver>label</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>94</x>
+     <y>157</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>79</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

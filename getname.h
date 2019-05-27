@@ -2,7 +2,6 @@
 #define GETNAME_H
 
 #include <QWidget>
-#include <result.h>
 
 namespace Ui {
 class Form;
@@ -18,7 +17,6 @@ public:
 
 signals:
     void firstWindow();  // Сигнал для первого окна на открытие
-    void nextWindow();
 
 private slots:
     // Слот-обработчик нажатия кнопки
@@ -28,8 +26,6 @@ private slots:
 
 private:
     Ui::Form *ui;
-    resultat *restart;
-//    resultat *restart;
 };
 
 #endif // GETNAME_H
